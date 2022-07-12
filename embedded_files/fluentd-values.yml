@@ -1,8 +1,0 @@
-fileConfigs:
-  04_outputs.conf: |-
-    <label @OUTPUT>
-      <match **>
-        @type file
-        path "/testdata"
-      </match>
-    </label>

@@ -1,4 +1,4 @@
-name: cnf_testsuite
+name: tar
 version: 0.1.0
 
 authors:
@@ -7,53 +7,9 @@ authors:
   - Denver Williams <denver@debian.nz>
 
 targets:
-  cnf_testsuite:
-    main: src/cnf_testsuite.cr
-
-crystal: '>= 1.0.0'
-
-dependencies:
-  sam:
-    github: vulk/sam.cr
-    commit: 4e3b271d31d7
-  totem:
-    github: icyleaf/totem
-    version: ~> 0.7.0
-  halite:
-    github: icyleaf/halite
-    version: ~> 0.12.0
-  
-  icr:
-    github: crystal-community/icr
-    branch: master
-
-  commander:
-    github: mrrooijen/commander
-    version: ~> 0.4.0
-
-  retriable:
-    github: Sija/retriable.cr
-    version: ~> 0.2.4
   tar:
-    path: utils/tar
-  docker_client:
-    path: utils/docker_client
-  git_client:
-    path: utils/git_client
-  kubectl_client:
-    path: utils/kubectl_client
-  helm:
-    path: utils/helm
-  airgap:
-    path: utils/airgap
-  retriable:
-    github: Sija/retriable.cr
-  protobuf:
-    github: jeromegn/protobuf.cr
+    main: tar.cr
 
-development_dependencies:
-  ameba:
-    github: crystal-ameba/ameba
-    version: ~> 0.14.3
+crystal: '>= 0.35.1'
 
 license: MIT

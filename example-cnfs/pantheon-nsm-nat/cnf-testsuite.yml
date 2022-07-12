@@ -1,5 +1,0 @@
----
-helm_directory: nat-cnf 
-release_name: cnf-nat 
-service_name: 
-allowlist_helm_chart_container_names: [falco, node-cache, nginx, coredns, calico-node, kube-proxy, nginx-proxy, kube-multus]

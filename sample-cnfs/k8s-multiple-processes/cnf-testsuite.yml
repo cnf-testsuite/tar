@@ -1,9 +1,0 @@
----
-helm_directory: chart
-release_name: sidecar-container-demo
-service_name: 
-helm_repository:
-  name: stable 
-  repo_url: https://cncf.gitlab.io/stable
-rolling_update_test_tag: 1.6.7
-allowlist_helm_chart_container_names: [falco, node-cache, nginx, coredns, calico-node, kube-proxy, nginx-proxy]

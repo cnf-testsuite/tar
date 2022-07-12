@@ -1,4 +1,0 @@
----
-release_name: linkerd 
-helm_chart: linkerd/linkerd2
-allowlist_helm_chart_container_names: [falco, nginx, linkerd, calico-node, kube-proxy, nginx-proxy, node-cache]
