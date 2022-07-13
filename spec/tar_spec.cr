@@ -1,5 +1,5 @@
 require "./spec_helper.cr"
-require "../tar.cr"
+require "../src/tar.cr"
 require "../../find/find.cr"
 require "file_utils"
 

@@ -1,6 +1,6 @@
 require "spec"
 require "colorize"
-require "../tar.cr"
+require "../src/tar.cr"
 
 ENV["CRYSTAL_ENV"] = "TEST" 
 
