@@ -6,10 +6,6 @@ authors:
   - Joshua Darius <Joshua.smith@vulk.coop>
   - Denver Williams <denver@debian.nz>
 
-targets:
-  tar:
-    main: tar.cr
-
 crystal: '>= 0.35.1'
 
 license: MIT
