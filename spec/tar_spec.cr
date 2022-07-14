@@ -1,13 +1,14 @@
 require "./spec_helper.cr"
 require "../src/tar.cr"
-require "../../find/find.cr"
+# require "../../find/find.cr"
+require "find"
 require "file_utils"
 
 describe "TarClient" do
 
   before_all do
     unless Dir.exists?("./tmp")
-      TarClient::LOGGING.info `mkdir ./tmp`
+      Log.info {`mkdir ./tmp`}
     end
   end
   it "'.tar' should tar a source file or directory", tags: ["tar-install"]  do
@@ -35,7 +36,7 @@ describe "TarClient" do
     TarClient.tar("./tmp/test.tar", "./spec/fixtures", "litmus-operator-v1.13.2.yaml")
     TarClient.modify_tar!("./tmp/test.tar") do |directory| 
       template_files = Find.find(directory, "*.yaml*", "100")
-      TarClient::LOGGING.debug "template_files: #{template_files}"
+      Log.debug {"template_files: #{template_files}"}
       template_files.map do |x| 
         input_content = File.read(x) 
         output_content = input_content.gsub(/(.*imagePullPolicy:)(.*)/,"\\1 Never")
